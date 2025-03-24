@@ -10,6 +10,63 @@
 	//-webkit-font-smoothing: antialiased;
 	//-moz-osx-font-smoothing: grayscale;
 	//color: #000;
+
+	--bold: 700;
+	--regular: 400;
+	--standart: 16px;
+	--cardTitle: 20px;
+	--cardDesc: 14px;
+
+	--primary: #4a6fff;
+	--primary-light: #7b93ff;
+	--secondary: #ff6b6b;
+	--accent: #ffd166;
+	--dark: #2a324b;
+	--light: #f7f9fc;
+	--gray: #e1e5ee;
+	--gray-dark: #9da5b9;
+	--white: #fff;
+
+	--shadow-sm: 0 8px 16px 0px rgba(0, 0, 0, 0.05);
+	--shadow-md: 0 4px 8px 0px rgba(0, 0, 0, 0.1);
+	--shadow-lg: 0 8px 16px 0px rgba(0, 0, 0, 0.15);
+
+	* {
+		list-style: none;
+	}
+
+	.iconText {
+		font-weight: 700;
+		font-size: 22px;
+		line-height: 100%;
+		letter-spacing: 0;
+	}
+
+	.standartText {
+		font-weight: var(--regular);
+		font-size: var(--standart);
+		line-height: 100%;
+		letter-spacing: 0;
+	}
+
+	.titleCard {
+		font-weight: var(--bold);
+		font-size: var(--cardTitle);
+		line-height: 100%;
+		letter-spacing: 0;
+	}
+
+	.descCard {
+		font-weight: var(--regular);
+		font-size: var(--cardDesc);
+		line-height: 100%;
+		letter-spacing: 0;
+	}
+
+	.copyright {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 100%;
+		letter-spacing: 0;
+	}
 }
-
-

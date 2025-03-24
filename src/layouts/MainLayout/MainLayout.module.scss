@@ -1,24 +1,22 @@
 .wrap {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 
-  &__header {
+	&__header {
+		flex: 0 0 auto;
+		min-height: 50px;
 		display: flex;
+		align-items: center;
 		justify-content: center;
-		gap: 8px;
-		padding: 12px;
-		&Btn{
-			min-width: 90px;
-			& button{
-				width: 100%;
-			}
-		}
+		background-color: var(--dark);
+		color: var(--light);
 	}
-  &__body {
-    flex: 1 1 auto;
+
+	&__body {
+		flex: 1 1 auto;
 		height: inherit;
 		display: flex;
 		position: relative;
@@ -29,13 +27,21 @@
 			display: flex;
 			flex-direction: column;
 		}
-  }
+	}
 
-  &__footer {
-    flex: 0 0 auto;
+	&__footer {
+		flex: 0 0 auto;
 		min-height: 50px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-  }
+
+		background-color: var(--dark);
+		color: var(--light);
+	}
+
+	&__footerText {
+		font-weight: 300;
+		font-size: 14px;
+	}
 }
