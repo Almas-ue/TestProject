@@ -1,10 +1,12 @@
+import { FC } from 'react';
+import clsx from 'clsx';
 import { Link } from 'react-router-dom';
 import { ROUTES } from '@/routes.tsx';
-import { ButtonX } from '@components/ButtonX';
-import style from './header.module.scss';
-import clsx from 'clsx';
+
 import Container from '@/components/container';
-import { FC } from 'react';
+
+import style from './header.module.scss';
+import { menuList } from '../menuList';
 
 interface Props {
 	className?: string;
@@ -15,24 +17,22 @@ const Header: FC<Props> = ({ className }) => {
 		<header className={clsx(style.header, className)}>
 			<Container>
 				<div className={style.headerInner}>
-					<h2 className={style.wrap__headerLogo}>CompanyName</h2>
-					<nav className={style.wrap__headerNav}>
-						<ul className={style.wrap__headerNavList}>
-							<li className={style.header__itemLink}>
-								<Link to={ROUTES.home.path}>Главная</Link>
-							</li>
-							<li className={style.itemLink}>
-								<Link to={ROUTES.test.path}>О нас</Link>
-							</li>
-							<li className={style.itemLink}>
-								<Link to={ROUTES.test.path}>Услуги</Link>
-							</li>
-							<li className={style.itemLink}>
-								<Link to={ROUTES.test.path}>Портфолио</Link>
-							</li>
-							<li className={style.itemLink}>
-								<Link to={ROUTES.test.path}>Контакты</Link>
-							</li>
+					<Link
+						to={ROUTES.home.path}
+						className={clsx('iconText', style.header__headerLogo)}
+					>
+						CompanyName
+					</Link>
+					<nav className={style.header__headerNav}>
+						<ul className={style.nav__headerNavList}>
+							{menuList.map(({ name, path }, index) => (
+								<li
+									key={index}
+									className={clsx('standartText', style.nav__itemLink)}
+								>
+									<Link to={path}>{name}</Link>
+								</li>
+							))}
 						</ul>
 					</nav>
 				</div>

@@ -14,8 +14,8 @@
 	--bold: 700;
 	--regular: 400;
 	--standart: 16px;
-	--cardTitle: 20px;
-	--cardDesc: 14px;
+	--textTitle: 20px;
+	--textDesc: 14px;
 
 	--primary: #4a6fff;
 	--primary-light: #7b93ff;
@@ -33,12 +33,14 @@
 
 	* {
 		list-style: none;
+		margin: 0;
+		padding: 0;
 	}
 
 	.iconText {
 		font-weight: 700;
 		font-size: 22px;
-		line-height: 100%;
+		line-height: normal;
 		letter-spacing: 0;
 	}
 
@@ -49,17 +51,24 @@
 		letter-spacing: 0;
 	}
 
-	.titleCard {
+	.h1_text{
 		font-weight: var(--bold);
-		font-size: var(--cardTitle);
-		line-height: 100%;
+		font-size: 32px;
+		line-height: normal;
 		letter-spacing: 0;
 	}
 
-	.descCard {
+	.titleText {
+		font-weight: var(--bold);
+		font-size: var(--textTitle);
+		line-height: normal;
+		letter-spacing: 0;
+	}
+
+	.descText {
 		font-weight: var(--regular);
-		font-size: var(--cardDesc);
-		line-height: 100%;
+		font-size: var(--textDesc);
+		line-height: normal;
 		letter-spacing: 0;
 	}
 

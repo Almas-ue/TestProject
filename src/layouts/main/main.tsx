@@ -1,7 +1,10 @@
 import clsx from 'clsx';
 import { FC } from 'react';
+
+import Advantage from './advantage';
+
 import style from './main.module.scss';
-import Container from '@/components/container';
+import Works from './works';
 
 interface Props {
 	className?: string;
@@ -11,10 +14,9 @@ interface Props {
 const Main: FC<Props> = ({ className, children }) => {
 	return (
 		<main className={clsx(style.main, className)}>
-			<Container>
-				<h2>main</h2>
-				{children}
-			</Container>
+			<Advantage />
+			<Works />
+			{children}
 		</main>
 	);
 };

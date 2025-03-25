@@ -1,0 +1,18 @@
+.card {
+	max-width: 370px;
+    max-height: 260px;
+	background-color: var(--gray);
+	border-radius: 8px;
+
+	&__cardInner {
+		padding: 122px 150px;
+	}
+
+	.nameProject {
+		white-space: nowrap;
+
+		font-weight: var(--bold);
+		font-size: var(--standart);
+		color: var(--gray-dark);
+	}
+}

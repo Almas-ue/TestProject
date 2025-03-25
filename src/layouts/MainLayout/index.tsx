@@ -20,7 +20,7 @@ export const MainLayout: FC<PropsWithChildren<MainLayoutProps>> = ({
 }) => {
 	return (
 		<div className={clsx(s.wrap, classNames?.root)}>
-			<Header className={clsx(s.wrap__header, classNames?.footer)} />
+			<Header className={clsx(classNames?.footer)} />
 			<Main className={clsx(s.wrap__body, classNames?.body)} />
 			<footer className={clsx(s.wrap__footer, classNames?.footer)}>
 				<p className={s.wrap__footerText}>© 2025 All rights reserved</p>

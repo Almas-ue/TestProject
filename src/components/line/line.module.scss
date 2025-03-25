@@ -1,0 +1,37 @@
+.line {
+	display: flex;
+	justify-content: space-between;
+
+	font-weight: 500;
+	line-height: normal;
+	letter-spacing: 0;
+
+	&__star {
+		display: flex;
+		align-items: baseline;
+		gap: 5px;
+
+		color: var(--gray-dark);
+
+		.star {
+			font-weight: 400;
+			font-size: 16px;
+		}
+
+		.rating {
+			font-size: 14px;
+		}
+	}
+
+	&__tag {
+		background-color: var(--gray);
+		padding: 4px 8px;
+		border-radius: 4px;
+
+		.name {
+			color: var(--dark);
+
+			font-size: 12px;
+		}
+	}
+}

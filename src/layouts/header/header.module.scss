@@ -1,27 +1,56 @@
 .header {
 	background-color: var(--dark);
-
 	color: var(--light);
+	height: 50px;
 
 	.headerInner {
-
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		gap: 8px;
 	}
 
-	.wrap__headerNav {
+	&__headerLogo {
+		margin: 0;
+		padding-block: 11.5px;
+	}
+
+	&__headerNav {
 		white-space: nowrap;
-		.wrap__headerNavList {
+
+		.nav__headerNavList {
+			margin: 0;
 			display: flex;
 			gap: 20px;
+
+			.nav__itemLink {
+				a {
+					position: relative;
+					padding-bottom: 14px;
+
+					&::before {
+						content: "";
+						position: absolute;
+						width: 0;
+						left: 0;
+						bottom: 0;
+						border-bottom: 2px solid var(--accent);
+
+						transition: 0.3s;
+					}
+
+					&:hover {
+						&::before {
+							width: 100%;
+						}
+					}
+				}
+			}
 		}
 	}
 
-
 	@media screen and (max-width: 666px) {
-		.wrap__headerNav {
+		.header__headerNav {
 			display: none;
 		}
 	}
