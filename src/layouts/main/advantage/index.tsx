@@ -1,15 +1,16 @@
-import clsx from 'clsx';
 import { FC } from 'react';
-
-import style from './advantage.module.scss';
-import Line from '@/components/line/line';
-import Container from '@/components/container';
-import { Link } from 'react-router-dom';
+import clsx from 'clsx';
 import { ROUTES } from '@/routes';
+
+import { Link } from 'react-router-dom';
+import Container from '@/components/container';
+import Line from '@/components/line/line';
 
 import sparkles from './emoji/sparkles.png';
 import rocket from './emoji/rocket.png';
 import phone from './emoji/mobilePhone.png';
+
+import style from './advantage.module.scss';
 
 interface Props {
 	className?: string;
@@ -22,7 +23,7 @@ const Advantage: FC<Props> = ({ className }) => {
 				<h2 className={clsx('titleText', style.advantage__title)}>
 					Инновационные решения для вашего бизнеса
 				</h2>
-				<div className={style.advantage}>
+				<div className={style.advantageBlock}>
 					<Link to={ROUTES.test.path} className={style.advantage__item}>
 						<div className={style.advantageInner}>
 							<div className={style.advantageInner__iconCard}>

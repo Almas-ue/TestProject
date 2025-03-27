@@ -1,6 +1,4 @@
 .advantage {
-	display: flex;
-	gap: 22px;
 	text-align: center;
 
 	background-color: var(--light);
@@ -11,59 +9,97 @@
 		text-align: center;
 	}
 
-	.advantage__item {
-		position: relative;
-		border-radius: 8px;
-		background-color: var(--white);
-		padding: 20px;
+	.advantageBlock {
+		display: flex;
+		gap: 22px;
 		margin-top: 30px;
-		box-shadow: var(--shadow-md);
 
-		transition: 0.3s;
+		.advantage__item {
+			position: relative;
+			margin-top: 30px;
 
-		&:hover {
-			box-shadow: var(--shadow-lg);
-		}
+			border-radius: 8px;
+			background-color: var(--white);
+			padding: 20px;
+			box-shadow: var(--shadow-md);
 
-		.advantageInner {
-			display: flex;
-			height: 100%;
-			flex-direction: column;
-			justify-content: space-between;
-			max-width: 330px;
+			transition: 0.3s;
 
-			&__iconCard {
-				position: absolute;
-				top: -40px;
-				left: 50%;
-				transform: translate(-50%, 0);
-				display: inline-block;
-				border-radius: 12px;
-                width: 60px;
-                height: 60px;
-				background-color: var(--primary-light);
-                
-                display: flex;
-                align-items: center;
-                justify-content: center;
+			&:hover {
+				box-shadow: var(--shadow-lg);
+			}
 
-				.imgEmoji {
-					width: 25px;
-					height: 25px;
-                    
+			.advantageInner {
+				display: flex;
+				height: 100%;
+				flex-direction: column;
+				justify-content: space-between;
+				max-width: 330px;
 
-					image-orientation: from-image;
+				&__iconCard {
+					position: absolute;
+					top: -40px;
+					left: 50%;
+					transform: translate(-50%, 0);
+					display: inline-block;
+					border-radius: 12px;
+					width: 60px;
+					height: 60px;
+					background-color: var(--primary-light);
+
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					.imgEmoji {
+						width: 25px;
+						height: 25px;
+
+						image-orientation: from-image;
+					}
+				}
+
+				&__itemTitle {
+					margin-top: 27px;
+				}
+
+				&__itemDesc {
+					flex: 1;
+					margin-top: 12px;
+					margin-bottom: 22px;
 				}
 			}
+		}
+	}
 
-			&__itemTitle {
-				margin-top: 27px;
+	@media screen and (max-width: 965px) {
+		.advantage__item {
+			.advantageInner__itemTitle {
+				font-size: var(--textTitleTablet);
 			}
 
-			&__itemDesc {
-				flex: 1;
-				margin-top: 12px;
-				margin-bottom: 22px;
+			.advantageInner__itemDesc {
+				font-size: var(--textDescTablet);
+			}
+		}
+	}
+
+	@media screen and (max-width: 889px) {
+		.advantageBlock {
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 24px;
+
+			.advantage__item {
+				max-width: 340px;
+
+				.advantageInner__itemTitle {
+					font-size: var(--textTitle);
+				}
+	
+				.advantageInner__itemDesc {
+					font-size: var(--textDesc);
+				}
 			}
 		}
 	}

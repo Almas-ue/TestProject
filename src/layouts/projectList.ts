@@ -1,38 +1,40 @@
+import { ROUTES } from '@/routes.tsx';
+
 export const projectsList = [
 	{
 		name: 'E-commerce платформа',
 		img: '',
 		category: 'Web development',
-		url: 'https://github.com/for-the-test/test-project',
+		url: ROUTES.home.path,
 	},
 	{
 		name: 'Test project',
 		img: '',
 		category: 'Web development',
-		url: 'https://github.com/for-the-test/test-project',
+		url: ROUTES.test.path,
 	},
 	{
 		name: 'Test project',
-		img: 'https://picsum.photos/200',
+		img: 'https://www.bytewebster.com/frontendprojects/uploads/images/responsive-e-commerce-website-template-bytewebster.jpg',
 		category: 'Web development',
-		url: 'https://github.com/for-the-test/test-project',
-	},
-	{
-		name: 'Test project',
-		img: '',
-		category: 'Web development',
-		url: 'https://github.com/for-the-test/test-project',
+		url: ROUTES.test.path,
 	},
 	{
 		name: 'Test project',
 		img: '',
 		category: 'Web development',
-		url: 'https://github.com/for-the-test/test-project',
+		url: ROUTES.test.path,
 	},
 	{
 		name: 'Test project',
 		img: '',
 		category: 'Web development',
-		url: 'https://github.com/for-the-test/test-project',
+		url: ROUTES.test.path,
+	},
+	{
+		name: 'Test project',
+		img: '',
+		category: 'Web development',
+		url: ROUTES.test.path,
 	},
 ];

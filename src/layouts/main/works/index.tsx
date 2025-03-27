@@ -5,9 +5,10 @@ import Container from '@/components/container';
 import { Link } from 'react-router-dom';
 import { menuList } from '@/layouts/menuList';
 
-import style from './works.module.scss';
 import { projectsList } from '@/layouts/projectList';
 import CardProject from '@/components/cardProject/cardProject';
+
+import style from './works.module.scss';
 
 interface Props {
 	className?: string;
