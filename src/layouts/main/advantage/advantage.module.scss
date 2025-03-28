@@ -90,15 +90,21 @@
 			justify-content: center;
 			gap: 24px;
 
-			.advantage__item {
-				max-width: 340px;
+			.advantageInner__itemTitle {
+				font-size: var(--textTitle);
+			}
 
-				.advantageInner__itemTitle {
-					font-size: var(--textTitle);
-				}
-	
-				.advantageInner__itemDesc {
-					font-size: var(--textDesc);
+			.advantageInner__itemDesc {
+				font-size: var(--textDesc);
+			}
+		}
+	}
+
+	@media screen and (max-width: 738px) {
+		.advantageBlock {	
+
+			.advantage__item {
+				.advantageInner {
 				}
 			}
 		}

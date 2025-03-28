@@ -75,4 +75,12 @@
 			opacity: 1;
 		}
 	}
+
+	@media screen and (max-width: 400px) {
+		padding-inline: 35px;
+	}
+
+	@media screen and (max-width: 350px) {
+		padding-inline: 25px;
+	}
 }

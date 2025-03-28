@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import { ROUTES } from '@/routes.tsx';
 
 import Container from '@/components/container';
+import { menuList } from '../menuList';
 
 import style from './header.module.scss';
-import { menuList } from '../menuList';
 
 interface Props {
 	className?: string;

@@ -1,12 +1,11 @@
 .works {
+	text-align: center;
+
 	.works__header {
+		width: 100%;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-	}
-
-	&__header {
-		text-align: center;
+		justify-content: center;
 	}
 
 	&__title {
@@ -21,24 +20,18 @@
 	&__nav {
 		margin-top: 32px;
 		border-bottom: 1px solid var(--gray);
+		display: flex;
+		justify-content: center;
 
 		&_list {
 			display: flex;
 			justify-content: center;
 			gap: 35px;
-			white-space: nowrap; /* Отключить перенос строк */
 
-			overflow-x: auto;
-			-webkit-overflow-scrolling: touch; /* Плавный скролл на мобильных устройствах */
-			scrollbar-width: none; /* Убрать скроллбар для Firefox */
-			&::-webkit-scrollbar {
-			  display: none; /* Убрать скроллбар для Chrome, Safari */
-			}
 			padding-block: 13.5px;
 		}
 
 		&_item {
-			display: inline-block;
 			a {
 				position: relative;
 
@@ -93,8 +86,24 @@
 	}
 
 	@media screen and (max-width: 768px) {
-		.works__desc {
-			max-width: 340px;
+		.works__header {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			.works__title,
+			.works__desc {
+				max-width: 340px;
+			}
+		}
+	}
+
+	@media screen and (max-width: 500px) {
+		.works__nav {
+			border: 0;
+			.works__nav_list {
+				flex-wrap: wrap;
+			}
 		}
 	}
 }
