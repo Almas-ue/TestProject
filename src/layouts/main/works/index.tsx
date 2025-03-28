@@ -1,12 +1,12 @@
 import { FC, useState } from 'react';
 import clsx from 'clsx';
+import { Link } from 'react-router-dom';
 
 import Container from '@/components/container';
-import { Link } from 'react-router-dom';
+import CardProject from '@/components/cardProject/cardProject';
 import { menuList } from '@/layouts/menuList';
 
 import { projectsList } from '@/layouts/projectList';
-import CardProject from '@/components/cardProject/cardProject';
 
 import style from './works.module.scss';
 

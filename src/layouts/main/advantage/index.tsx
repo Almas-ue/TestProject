@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import clsx from 'clsx';
+import { Link } from 'react-router-dom';
 import { ROUTES } from '@/routes';
 
-import { Link } from 'react-router-dom';
 import Container from '@/components/container';
 import Line from '@/components/line/line';
 

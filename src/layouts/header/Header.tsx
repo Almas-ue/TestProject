@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import clsx from 'clsx';
 import { Link } from 'react-router-dom';
-import { ROUTES } from '@/routes.tsx';
 
 import Container from '@/components/container';
+import { ROUTES } from '@/routes.tsx';
 import { menuList } from '../menuList';
 
 import style from './header.module.scss';

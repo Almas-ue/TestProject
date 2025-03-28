@@ -1,10 +1,10 @@
-import clsx from 'clsx';
 import { FC } from 'react';
+import clsx from 'clsx';
 
 import Advantage from './advantage';
+import Works from './works';
 
 import style from './main.module.scss';
-import Works from './works';
 
 interface Props {
 	className?: string;

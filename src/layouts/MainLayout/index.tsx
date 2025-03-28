@@ -1,7 +1,7 @@
-import clsx from 'clsx';
 import { FC, PropsWithChildren } from 'react';
+import clsx from 'clsx';
+import { useLocation } from 'react-router-dom';
 
-import { ErrorBoundary } from '@/components/ErrorBoundary';
 import Header from '../header/Header';
 import Main from '../main/main';
 import Footer from '../footer/footer';
@@ -20,10 +20,16 @@ export const MainLayout: FC<PropsWithChildren<MainLayoutProps>> = ({
 	children,
 	classNames,
 }) => {
+	const location = useLocation();
+
 	return (
 		<div className={clsx(s.wrap, classNames?.root)}>
 			<Header className={clsx(classNames?.footer)} />
-			<Main className={clsx(s.wrap__body, classNames?.body)} />
+			{location.pathname === '/' ? (
+				<Main className={clsx(s.wrap__body, classNames?.body)} />
+			) : (
+				<div className={s.wrap__body}>{children}</div>
+			)}
 			<Footer className={clsx(s.wrap__footer, classNames?.footer)} />
 		</div>
 	);
